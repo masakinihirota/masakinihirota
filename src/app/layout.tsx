@@ -1,13 +1,17 @@
-import "@/styles/globals.css";
+import '@/styles/globals.css';
+// import { ThemeProvider } from '@/components/theme-provider';
+import { Providers } from './providers';
+
+import type { Metadata } from 'next';
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : "http://localhost:3000";
+  : 'http://localhost:3000';
 
-export const metadata = {
-  metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+export const metadata: Metadata = {
+  title: 'VNS.BLUE',
+  description: 'VNS.BLUE',
+  keywords: 'VNS.BLUE, オアシス宣言',
 };
 
 export default function RootLayout({
@@ -16,11 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" >
-      <body>
-        <main className="flex min-h-screen flex-col items-center">
-          {children}
-        </main>
+    // デフォルト ダークモード
+    <html lang="ja" className="dark">
+      <body className="" suppressHydrationWarning={true}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

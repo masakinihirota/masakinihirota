@@ -1,30 +1,42 @@
+import { Button } from '@nextui-org/button';
+import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import { Moon, Sun } from 'lucide-react';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
 
 import AuthButton from '@/components/AuthButton';
-import DeployButton from '@/components/DeployButton';
+import { ModeToggle } from '@/components/toggle-button';
 
 export default async function Index() {
   const cookieStore = cookies();
 
   return (
-    <div className="flex w-full flex-1 flex-col items-center gap-20">
-      <nav className="flex h-16 w-full justify-center border-b border-b-foreground/10">
-        <div className="flex w-full max-w-4xl items-center justify-between p-3 text-sm">
-          <DeployButton />
-          <AuthButton />
-        </div>
+    <div className="">
+      <nav className="flex flex-row items-center justify-between ">
+        Home
+        {/* <DeployButton /> */}
+        <ModeToggle />
+        <AuthButton />
       </nav>
-      <Link href="/notes">notes</Link>
-      <Link href="/notes/client">notes/client</Link>
-      <Link href="/type">type</Link>
+      <MoonIcon />
+      <Moon />
+      <SunIcon />
+      <Sun />
+      <div>
+        <Button color="default">Default</Button>
+        <Button color="primary">Primary</Button>
+        <Button color="secondary">Secondary</Button>
+        <Button color="success">Success</Button>
+        <Button color="warning">Warning</Button>
+        <Button color="danger">Danger</Button>
+      </div>
+      <Link href="./ModeTogglePage">ModeTogglePage</Link>
+      <div className="flex flex-col items-center">
+        <Link href="/notes">notes</Link>
+        <Link href="/notes/client">notes/client</Link>
+        <Link href="/type">type</Link>
+      </div>
       footer
-      <ul>
-        <a href="/home">Home</a>
-        <a href="/about">About</a>
-        <a href="/blog">Blog</a>
-        <a href="#top">Top</a>
-      </ul>
     </div>
   );
 }
