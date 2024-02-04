@@ -4,7 +4,7 @@ import { Moon, Sun } from 'lucide-react';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
 
-import AuthButton from '@/components/AuthButton';
+import AuthButton from '@/components/Auth/AuthButton';
 import { ModeToggle } from '@/components/toggle-button';
 
 export default async function Index() {
@@ -16,6 +16,7 @@ export default async function Index() {
         Home
         {/* <DeployButton /> */}
         <ModeToggle />
+        <Link href="/auth">OAuthLoginButton</Link>
         <AuthButton />
       </nav>
       <MoonIcon />
