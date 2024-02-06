@@ -25,12 +25,6 @@ export default async function Index() {
         <Button color="warning">Warning</Button>
         <Button color="danger">Danger</Button>
       </div>
-      <Link href="./ModeTogglePage">ModeTogglePage</Link>
-      <div className="flex flex-col items-center">
-        <Link href="/notes">notes</Link>
-        <Link href="/notes/client">notes/client</Link>
-        <Link href="/type">type</Link>
-      </div>
       footer
     </div>
   );

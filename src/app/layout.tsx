@@ -27,14 +27,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-// <ThemeProvider
-// attribute="class"
-// defaultTheme="system"
-// enableSystem
-// disableTransitionOnChange
-// >
-// <main className="flex flex-col items-center min-h-screen">
-//   {children}
-// </main>
-// </ThemeProvider>
