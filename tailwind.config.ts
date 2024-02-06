@@ -1,11 +1,15 @@
-import { nextui } from '@nextui-org/theme';
+import { nextui } from '@nextui-org/react';
 
 import type { Config } from 'tailwindcss';
+// tailwind.config.js
 
 const config = {
   darkMode: ['class'],
   content: [
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   prefix: '',

@@ -1,6 +1,4 @@
 import { Button } from '@nextui-org/button';
-import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
-import { Moon, Sun } from 'lucide-react';
 import { cookies } from 'next/headers';
 import Link from 'next/link';
 
@@ -19,10 +17,6 @@ export default async function Index() {
         <Link href="/auth">OAuthLoginButton</Link>
         <AuthButton />
       </nav>
-      <MoonIcon />
-      <Moon />
-      <SunIcon />
-      <Sun />
       <div>
         <Button color="default">Default</Button>
         <Button color="primary">Primary</Button>
