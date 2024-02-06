@@ -3,7 +3,7 @@ import { cookies } from 'next/headers';
 import Link from 'next/link';
 
 import AuthButton from '@/components/Auth/AuthButton';
-import { ModeToggle } from '@/components/toggle-button';
+import { ThemeSwitcher } from '@/components/darkmode/ThemeSwitcher';
 
 export default async function Index() {
   const cookieStore = cookies();
@@ -13,7 +13,8 @@ export default async function Index() {
       <nav className="flex flex-row items-center justify-between ">
         Home
         {/* <DeployButton /> */}
-        <ModeToggle />
+        {/* Dark mode 切り替えスイッチ */}
+        <ThemeSwitcher />
         <Link href="/auth">OAuthLoginButton</Link>
         <AuthButton />
       </nav>
