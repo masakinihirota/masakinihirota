@@ -20,11 +20,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // デフォルト ダークモード
-    <html lang="ja" className="dark">
-      <body className="" suppressHydrationWarning={true}>
+    <html lang="ja" className="dark" suppressHydrationWarning>
+      <body className="">
         <Providers>{children}</Providers>
       </body>
     </html>
   );
 }
+
+// <ThemeProvider
+// attribute="class"
+// defaultTheme="system"
+// enableSystem
+// disableTransitionOnChange
+// >
+// <main className="flex flex-col items-center min-h-screen">
+//   {children}
+// </main>
+// </ThemeProvider>
