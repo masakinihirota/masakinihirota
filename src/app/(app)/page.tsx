@@ -1,10 +1,13 @@
+export default async function Home() {
+  return;
+}
+import { createServerClient } from "@/lib/supabase-server";
 import { Button } from "@nextui-org/button";
 import { cookies } from "next/headers";
 import Link from "next/link";
 
 import AuthButton from "@/components/Auth/AuthButton";
 import { ThemeSwitcher } from "@/components/darkmode/ThemeSwitcher";
-import { createServerClient } from "@/lib/supabase-server";
 
 export default async function Home() {
   const cookieStore = cookies();
