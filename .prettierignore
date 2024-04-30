@@ -8,7 +8,6 @@ target/
 compiled/
 
 types_db.ts
-database.types.ts
 
 # Ignore artifacts:
 /build
@@ -27,7 +26,6 @@ pnpm-lock.yaml
 # Supabase
 /supabase/
 src/types/*
-src/types/database.types.ts
 src/types/types_db.ts
 
 # Storybook
