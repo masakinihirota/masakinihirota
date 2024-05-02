@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 import { useTranslation } from '@/app/i18n/client';
 
-import { Footer } from '../components/Footer/client';
+import { Footer } from '../../../components/layout/LngFooter/client';
 
 export default function Page({ params: { lng } }) {
   const { t } = useTranslation(lng, 'client-page');

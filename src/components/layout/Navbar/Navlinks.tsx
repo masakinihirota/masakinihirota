@@ -1,11 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { SignOut } from '@/utils/auth-helpers/server';
-import { handleRequest } from '@/utils/auth-helpers/client';
-import Logo from '@/components/icons/Logo';
 import { usePathname, useRouter } from 'next/navigation';
+
+import Logo from '@/components/icons/Logo';
+import { handleRequest } from '@/utils/auth-helpers/client';
+import { SignOut } from '@/utils/auth-helpers/server';
 import { getRedirectMethod } from '@/utils/auth-helpers/settings';
+
 import s from './Navbar.module.css';
 
 interface NavlinksProps {
@@ -13,6 +15,7 @@ interface NavlinksProps {
 }
 
 export default function Navlinks({ user }: NavlinksProps) {
+    // eslint-disable-next-line
   const router = getRedirectMethod() === 'client' ? useRouter() : null;
 
   return (
@@ -35,6 +38,7 @@ export default function Navlinks({ user }: NavlinksProps) {
       <div className="flex justify-end space-x-8">
         {user ? (
           <form onSubmit={(e) => handleRequest(e, SignOut, router)}>
+            {/* eslint-disable-next-line react-hooks/rules-of-hooks */}
             <input type="hidden" name="pathName" value={usePathname()} />
             <button type="submit" className={s.link}>
               Sign out
