@@ -12,7 +12,12 @@
   // parserのオプションを設定
   // JSXやECMAScriptのバージョンの設定など
   "parserOptions": {
-    "EXPERIMENTAL_useProjectService": true,
+     // tsconfig.jsonへのパス
+     "project": "./tsconfig.json",
+    "EXPERIMENTAL_useProjectService": {
+      // 許容する最大ファイル数
+      "maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING": 30
+    },
     "ecmaFeatures": {
       "jsx": true
     },
