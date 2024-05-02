@@ -12,8 +12,8 @@
   // parserのオプションを設定
   // JSXやECMAScriptのバージョンの設定など
   "parserOptions": {
-     // tsconfig.jsonへのパス
-     "project": "./tsconfig.json",
+    // tsconfig.jsonへのパス
+    "project": "./tsconfig.json",
     "EXPERIMENTAL_useProjectService": {
       // 許容する最大ファイル数
       "maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING": 30

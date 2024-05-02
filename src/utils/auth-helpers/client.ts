@@ -8,7 +8,6 @@ import { createClient } from '@/utils/supabase/client';
 
 import { redirectToPath } from './server';
 
-
 export async function handleRequest(
   e: React.FormEvent<HTMLFormElement>,
   requestFunc: (formData: FormData) => Promise<string>,
