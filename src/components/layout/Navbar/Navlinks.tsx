@@ -15,7 +15,7 @@ interface NavlinksProps {
 }
 
 export default function Navlinks({ user }: NavlinksProps) {
-    // eslint-disable-next-line
+  // eslint-disable-next-line
   const router = getRedirectMethod() === 'client' ? useRouter() : null;
 
   return (
