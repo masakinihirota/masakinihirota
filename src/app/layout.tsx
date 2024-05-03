@@ -1,9 +1,16 @@
+import { dir } from 'i18next';
 import { Metadata } from 'next';
-import { PropsWithChildren, Suspense } from 'react';
+import { Suspense } from 'react';
 
+import { languages } from '@/app/i18n/settings';
+import Navbar from '@/components/layout/Navbar';
 import { Toaster } from '@/components/ui/Toasts/toaster';
 import { getURL } from '@/utils/helpers';
-import 'src/styles/main.css';
+import '@/styles/main.css';
+
+export async function generateStaticParams() {
+  return languages.map((lng) => ({ lng }));
+}
 
 const meta = {
   title: 'Next.js Subscription Starter',
@@ -45,14 +52,14 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function RootLayout({ children }: PropsWithChildren) {
+export default async function RootLayout({ children, params: { lng = 'ja' } }) {
   return (
-    <html lang="en">
+    <html lang={lng} dir={dir(lng)}>
       <body className="bg-black loading">
-        {/* <Navbar /> */}
+        <Navbar />
         <main
-          id="skip"
           className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
+          id="skip"
         >
           {children}
         </main>

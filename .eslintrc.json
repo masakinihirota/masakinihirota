@@ -16,7 +16,7 @@
     "project": "./tsconfig.json",
     "EXPERIMENTAL_useProjectService": {
       // 許容する最大ファイル数
-      "maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING": 30
+      "maximumDefaultProjectFileMatchCount_THIS_WILL_SLOW_DOWN_LINTING": 50
     },
     "ecmaFeatures": {
       "jsx": true
