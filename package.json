@@ -27,7 +27,7 @@
     "accept-language": "^3.0.18",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
-    "clsx": "^2.1.0",
+    "clsx": "^2.1.1",
     "i18next": "^23.11.3",
     "i18next-browser-languagedetector": "^7.2.1",
     "i18next-resources-to-backend": "^1.2.1",
@@ -39,7 +39,7 @@
     "react-i18next": "^14.1.1",
     "react-merge-refs": "^2.1.1",
     "stripe": "^14.16.0",
-    "tailwind-merge": "^2.2.1",
+    "tailwind-merge": "^2.3.0",
     "tailwindcss": "^3.4.1",
     "tailwindcss-animate": "^1.0.7"
   },
