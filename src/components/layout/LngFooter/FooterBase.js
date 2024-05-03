@@ -7,7 +7,7 @@ export const FooterBase = ({ t, lng }) => {
   return (
     <footer style={{ marginTop: 50 }}>
       <Trans i18nKey="languageSwitcher" t={t}>
-        Switch from <strong>{{ lng }}</strong> to:{' '}
+        Switch from { lng } to:{' '}
       </Trans>
       {languages
         .filter((l) => lng !== l)
