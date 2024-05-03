@@ -56,7 +56,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function RootLayout({ children, params: { lng = 'ja' } }) {
   return (
     <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
-      <body className="bg-black loading">
+      <body className=" loading">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navbar />
           <main
