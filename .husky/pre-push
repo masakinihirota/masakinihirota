@@ -1,1 +1,2 @@
+pnpm run test
 turbo type-check build
