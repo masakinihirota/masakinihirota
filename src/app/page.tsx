@@ -3,6 +3,9 @@ import Link from 'next/link';
 
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
+import { Button } from './button/Button';
+
+
 export default function Page() {
   return (
     <div className="">
@@ -19,6 +22,7 @@ export default function Page() {
         </AlertDescription>
       </Alert>
       <Link href="./ModeTogglePage">ButtonTestPage</Link>
+      <Button label="Storybook Test Button" />
     </div>
   );
 }
