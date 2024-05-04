@@ -5,7 +5,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
 import { Button } from './button/Button';
 
-
 export default function Page() {
   return (
     <div className="">

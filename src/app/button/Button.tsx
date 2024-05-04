@@ -3,9 +3,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-export const Button = ({
-  label,
-}: ButtonProps) => {
+export const Button = ({ label }: ButtonProps) => {
   return (
     <button
       type="button"
