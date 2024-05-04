@@ -23,17 +23,8 @@ export default function Navlinks({ user }: NavlinksProps) {
       <div className="flex items-center flex-1">
         <Link href="/" className={s.logo} aria-label="Logo">
           VNS.BLUE
-          {/* <Logo /> */}
         </Link>
         <nav className="ml-6 space-x-2 lg:block">
-          <Link className={s.link} href="/">
-            Pricing
-          </Link>
-          {user && (
-            <Link className={s.link} href="/account">
-              Account
-            </Link>
-          )}
           <ModeToggle />
           <Link className={s.link} href="/">
             言語

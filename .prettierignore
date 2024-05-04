@@ -29,6 +29,7 @@ src/types/*
 src/types/types_db.ts
 
 # Storybook
+stories/
 *.stories.ts
 *.stories.tsx
 
