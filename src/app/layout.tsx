@@ -1,5 +1,6 @@
 import { dir } from 'i18next';
 import { Metadata } from 'next';
+import { ThemeProvider } from 'next-themes';
 import { Suspense } from 'react';
 
 import { languages } from '@/app/i18n/settings';
@@ -54,19 +55,21 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function RootLayout({ children, params: { lng = 'ja' } }) {
   return (
-    <html lang={lng} dir={dir(lng)}>
-      <body className="bg-black loading">
-        <Navbar />
-        <main
-          className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
-          id="skip"
-        >
-          {children}
-        </main>
-        {/* <Footer /> */}
-        <Suspense>
-          <Toaster />
-        </Suspense>
+    <html lang={lng} dir={dir(lng)} suppressHydrationWarning>
+      <body className=" loading">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          <main
+            className="min-h-[calc(100dvh-4rem)] md:min-h[calc(100dvh-5rem)]"
+            id="skip"
+          >
+            {children}
+          </main>
+          {/* <Footer /> */}
+          <Suspense>
+            <Toaster />
+          </Suspense>
+        </ThemeProvider>
       </body>
     </html>
   );
