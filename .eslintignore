@@ -18,6 +18,7 @@ package-lock.json
 pnpm-lock.yaml
 
 # Storybook
+stories/
 *.stories.ts
 *.stories.tsx
 
