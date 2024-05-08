@@ -22,6 +22,10 @@ export default function Page() {
       </Alert>
       <Link href="./ModeTogglePage">ButtonTestPage</Link>
       <Button label="Storybook Test Button" />
+
+      {/* userTestページへのリンク */}
+      {/* テストなのでハードコーディングのリンク */}
+      <Link href="/ja/userTest">userTest</Link>
     </div>
   );
 }
