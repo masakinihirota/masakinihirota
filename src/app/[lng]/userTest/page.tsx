@@ -8,16 +8,8 @@ export default async function Page() {
   console.log('user情報: ', user);
 
   return (
-      <div className="">
-        {user ? (
-          <div>
-            ユーザー認証中
-          </div>
-        ) : (
-          <div>
-            未ログイン
-          </div>
-        )}
-      </div>
+    <div className="">
+      {user ? <div>ユーザー認証中</div> : <div>未ログイン</div>}
+    </div>
   );
 }
